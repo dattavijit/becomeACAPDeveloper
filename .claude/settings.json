@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(docker run *)",
+      "Bash(npx --yes @devcontainers/cli@latest read-configuration --workspace-folder \"C:\\\\Users\\\\datta\\\\tools\\\\CAP\\\\becomeACAPDeveloper\")",
+      "Bash(MSYS_NO_PATHCONV=1 docker run --rm capdev-test bash -lc 'mkdir -p /tmp/empty && cd /tmp/empty && npm install; echo \"EXIT=$?\"')",
+      "Bash(mkdir -p .devcontainer)",
+      "Bash(mv devcontainer.json Dockerfile .devcontainer/)",
+      "Bash(MSYS_NO_PATHCONV=1 docker run --rm mcr.microsoft.com/vscode/devcontainers/javascript-node:0-20 bash -lc 'id node; echo \"--- image default user ---\"; whoami')",
+      "Bash(MSYS_NO_PATHCONV=1 docker run --rm mcr.microsoft.com/vscode/devcontainers/javascript-node:0-20 bash -lc 'getent passwd | awk -F: \"\\\\$3>=1000 && \\\\$3<65534 {print \\\\$1, \\\\$3}\"')"
+    ]
+  }
+}

@@ -1,0 +1,25 @@
+{
+    "name": "Become a CAP Developer",
+    "build": {
+        "dockerfile": "Dockerfile",
+        "args": {
+            "VARIANT": "20"
+        }
+    },
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "sapse.vscode-cds",
+                "dbaeumer.vscode-eslint",
+                "humao.rest-client",
+                "qwtel.sqlite-viewer",
+                "mechatroner.rainbow-csv"
+            ]
+        }
+    },
+    "forwardPorts": [
+        4004
+    ],
+    "postCreateCommand": "[ -f package.json ] && npm install || echo 'No package.json yet - skipping npm install'",
+    "remoteUser": "node"
+}
